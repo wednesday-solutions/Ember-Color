@@ -1,0 +1,6 @@
+{{#each hexColorGroups as |hexColorGroup|}}
+  <SwatchesGroup
+    @activeColor={{hex}}
+    @onClick={{action "onChange"}}
+    @hexColorGroup={{hexColorGroup}} />
+{{/each}}

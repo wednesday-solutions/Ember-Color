@@ -1,0 +1,42 @@
+<div class="{{styleNamespace}}__saturation">
+  <Saturation
+    @borderRadius={{3}}
+    @selectedColor={{selectedColor}}
+    @onChange={{onChange}}>
+    <div class="{{styleNamespace}}__saturation-pointer"></div>
+  </Saturation>
+</div>
+
+<div class="{{styleNamespace}}__controls">
+  <div class="{{styleNamespace}}__sliders">
+    <HuePicker
+      @onChange={{onChange}}
+      @height={{10}}
+      @selectedColor={{selectedColor}}>
+      <SliderPointer
+        @className="{{styleNamespace}}__picker" />
+    </HuePicker>
+    <Alpha
+      @className="{{styleNamespace}}__alpha-slider"
+      @onChange={{onChange}}
+      @selectedColor={{selectedColor}}>
+      <SliderPointer
+        @className="{{styleNamespace}}__picker" />
+    </Alpha>
+  </div>
+
+  <div class="{{styleNamespace}}__color">
+    <Checkboard/>
+    <div style={{activeBackgroundStyle}} class="{{styleNamespace}}__active-color"></div>
+  </div>
+</div>
+
+<SketchFields
+  @onChange={{onChange}}
+  @selectedColor={{selectedColor}}
+  @disableAlpha={{disableAlpha}}/>
+
+<SketchPresetColors
+  @selectedColor={{selectedColor}}
+  @onChange={{onChange}}
+  @hexColors={{presetColors}}/>

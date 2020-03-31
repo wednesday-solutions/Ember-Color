@@ -1,0 +1,31 @@
+& {
+  position: relative;
+  height: 16px;
+
+  &__checkboard {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+    margin: 0 3px;
+  }
+
+  &__pointer-container {
+    position: absolute;
+  }
+}

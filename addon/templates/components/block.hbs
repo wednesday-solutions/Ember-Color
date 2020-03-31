@@ -1,0 +1,28 @@
+<Swatch
+  @borderColor={{headerBorderColor}}
+  @className="{{styleNamespace}}__triangle" />
+<Swatch
+  @hexColor={{hex}}
+  @className="{{styleNamespace}}__head">
+  <div class="{{styleNamespace}}__color-text">
+    {{hex}}
+  </div>
+</Swatch>
+<div class="{{styleNamespace}}__colors-container">
+  <div class="{{styleNamespace}}__colors-container-margin-right">
+    {{#each colors as |color|}}
+      <span class="{{styleNamespace}}__color-swatch-container">
+        <SwatchWithBoxShadow
+          @onClick={{action "onSwatchClicked"}}
+          @onHover={{action "onHover"}}
+          @className="{{styleNamespace}}__swatch"
+          @hexColor={{color}} />
+      </span>
+    {{/each}}
+  </div>
+  <input
+    data-test-block-input-text
+    oninput={{action "onTextEntered"}}
+    value={{hex}}
+    class="{{styleNamespace}}__input">
+</div>

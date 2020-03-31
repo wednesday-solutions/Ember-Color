@@ -1,0 +1,113 @@
+<div class="container-selected-color" style={{previewSelectedColorStyle}}>
+  <div class="header-container">
+    <p class="header-container__title">
+      Ember Color
+    </p>
+
+    <p class="header-container__subtitle">
+      A collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter and more.
+    </p>
+  </div>
+</div>
+
+<div class="pickers-container">
+  <div class="relative-container">
+    <Sketch
+      @selectedColor={{color}}
+      @onChange={{action (mut color)}} />
+    <p class="color-picker-name">Sketch</p>
+  </div>
+</div>
+
+<div class="pickers-container">
+  <div class="relative-container">
+    <Block
+      @selectedColor={{color}}
+      @onChange={{action (mut color)}}/>
+    <p class="color-picker-name">Block</p>
+  </div>
+  <div class="pickers-container__containers">
+    <div class="pickers-container__github-hue-container">
+      <div class="relative-container">
+        <Github
+          @selectedColor={{color}}
+          @trianglePosition="top-right"
+          @onChange={{action (mut color)}}/>
+        <p class="color-picker-name">Github</p>
+      </div>
+
+      <div class="pickers-container__hue-alpha-container">
+        <div class="relative-container">
+          <HuePicker
+            @onChange={{action (mut color)}}
+            @selectedColor={{color}}>
+            <SliderPointer />
+          </HuePicker>
+          <p class="color-picker-name">Hue</p>
+        </div>
+
+        <div class="relative-container">
+          <Alpha
+            @onChange={{action (mut color)}}
+            @selectedColor={{color}}>
+            <SliderPointer />
+          </Alpha>
+          <p class="color-picker-name">Alpha</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pickers-container__twitter-circle-container">
+      <div class="relative-container pickers-container__twitter-container">
+        <Twitter
+          @selectedColor={{color}}
+          @onChange={{action (mut color)}} />
+        <p class="color-picker-name">Twitter</p>
+      </div>
+
+      <div class="relative-container">
+        <Circle
+          @selectedColor={{color}}
+          @onChange={{action (mut color)}} />
+        <p class="color-picker-name">Circle</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-pickers-container">
+  <div class="bottom-pickers-container__compact-material-container-slider">
+
+    <div class="relative-container">
+      <SliderSwatches
+        @selectedColor={{color}}
+        @onChange={{action (mut color)}} />
+      <p class="color-picker-name">Slider</p>
+    </div>
+    <div class="bottom-pickers-container__compact-material-container">
+
+      <div class="relative-container">
+        <Compact
+          @selectedColor={{color}}
+          @onChange={{action (mut color)}}/>
+        <p class="color-picker-name">Compact</p>
+      </div>
+
+      <div class="relative-container">
+        <Material
+          @selectedColor={{color}}
+          @onChange={{action (mut color)}}/>
+        <p class="color-picker-name">Material</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-pickers-container__swatches-container">
+    <div class="relative-container">
+      <Swatches
+        @selectedColor={{color}}
+        @onChange={{action (mut color)}}/>
+      <p class="color-picker-name">Swatches</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<input
+  data-test-editable-input-field
+  style={{styleInput}}
+  value={{value}}
+  oninput={{action "onChange"}}
+  class={{inputClassName}}>
+
+{{#unless hideLabel}}
+  <span
+    data-test-editable-input-label
+    class={{labelClassName}}>
+    {{label}}
+  </span>
+{{/unless}}

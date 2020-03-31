@@ -1,0 +1,77 @@
+<div>
+  {{#each colors as |color|}}
+    {{#let (equal (to-lower-case color) (to-lower-case hex)) (equal (to-lower-case color) "#ffffff") as |isActive isWhiteColor|}}
+      <span>
+        {{#if isWhiteColor}}
+          <Swatch
+            @onClick={{action "onSwatchClicked"}}
+            @onHover={{onHover}}
+            @isActive={{isActive}}
+            @className="{{styleNamespace}}__swatch"
+            @boxShadow={{grayBoxShadow}}
+            @hexColor={{color}}>
+            {{#if isActive}}
+              <div
+                data-test-compact-dot-indicator
+                class="{{styleNamespace}}__dot--black"></div>
+            {{/if}}
+          </Swatch>
+        {{else}}
+          <SwatchWithBoxShadow
+            @onClick={{action "onSwatchClicked"}}
+            @onHover={{onHover}}
+            @isActive={{isActive}}
+            @className="{{styleNamespace}}__swatch"
+            @hexColor={{color}}>
+            {{#if isActive}}
+              <div
+                data-test-compact-dot-indicator
+                class="{{styleNamespace}}__dot--white"></div>
+            {{/if}}
+          </SwatchWithBoxShadow>
+        {{/if}}
+      </span>
+    {{/let}}
+  {{/each}}
+</div>
+
+<div class="{{styleNamespace}}__color-text-container">
+  <Swatch
+    @className="{{styleNamespace}}__selected-color"
+    @hexColor={{hex}} />
+
+  <div class="{{styleNamespace}}__hex-text-container">
+    <input
+      data-test-compact-hex-input
+      oninput={{action "onHexValueChanged"}}
+      value={{hex}}
+      class="{{styleNamespace}}__hex-text">
+  </div>
+
+  <div class="{{styleNamespace}}__rgb-text-container">
+    <span class="{{styleNamespace}}__rbg-label">R</span>
+    <input
+      data-test-compact-red-input
+      oninput={{action "onRedValueChanged"}}
+      value={{redValue}}
+      class="{{styleNamespace}}__rgb-text">
+  </div>
+
+  <div class="{{styleNamespace}}__rgb-text-container">
+    <span class="{{styleNamespace}}__rbg-label">G</span>
+    <input
+      data-test-compact-green-input
+      oninput={{action "onGreenValueChanged"}}
+      value={{greenValue}}
+      class="{{styleNamespace}}__rgb-text">
+  </div>
+
+  <div class="{{styleNamespace}}__rgb-text-container">
+    <span class="{{styleNamespace}}__rbg-label">B</span>
+    <input
+      data-test-compact-blue-input
+      oninput={{action "onBlueValueChanged"}}
+      value={{blueValue}}
+      class="{{styleNamespace}}__rgb-text">
+  </div>
+</div>

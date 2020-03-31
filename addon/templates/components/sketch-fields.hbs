@@ -1,0 +1,56 @@
+<div class="{{styleNamespace}}__double">
+  <EditableInput
+    @inputClassName="{{styleNamespace}}__input"
+    @labelClassName="{{styleNamespace}}__label"
+    @label="hex"
+    @value={{ replace hex "#" "" }}
+    @onChange={{ action "onHandleChangeHex" }}
+  />
+</div>
+<div class="{{styleNamespace}}__single">
+  <EditableInput
+    @inputClassName="{{styleNamespace}}__input"
+    @labelClassName="{{styleNamespace}}__label"
+    @label="r"
+    @value={{ rgb.r }}
+    @onChange={{ action "onHandleChangeR" }}
+    @dragLabel={{true}}
+    @dragMax="255"
+  />
+</div>
+<div class="{{styleNamespace}}__single">
+  <EditableInput
+    @inputClassName="{{styleNamespace}}__input"
+    @labelClassName="{{styleNamespace}}__label"
+    @label="g"
+    @value={{ rgb.g }}
+    @onChange={{ action "onHandleChangeG" }}
+    @dragLabel={{true}}
+    @dragMax="255"
+  />
+</div>
+<div class="{{styleNamespace}}__single">
+  <EditableInput
+    @inputClassName="{{styleNamespace}}__input"
+    @labelClassName="{{styleNamespace}}__label"
+    @label="b"
+    @value={{ rgb.b }}
+    @onChange={{ action "onHandleChangeB" }}
+    @dragLabel={{true}}
+    @dragMax="255"
+  />
+</div>
+
+{{#unless disableAlpha}}
+  <div class="{{styleNamespace}}__alpha">
+    <EditableInput
+      @inputClassName="{{styleNamespace}}__input"
+      @labelClassName="{{styleNamespace}}__label"
+      @label="a"
+      @value={{ alphaDisplayValue }}
+      @onChange={{ action "onHandleChangeAlpha" }}
+      @dragLabel={{true}}
+      @dragMax="100"
+    />
+  </div>
+{{/unless}}

@@ -1,0 +1,19 @@
+& {
+  &__swatch {
+    height: 12px !important;
+    width: initial !important;
+  }
+
+  &__swatch--active {
+    transform: scaleY(1.8);
+    border-radius: 3.6px/2px;
+  }
+
+  &__first {
+    border-radius: 2px 0 0 2px;
+  }
+
+  &__last {
+    border-radius: 0 2px 2px 0;
+  }
+}

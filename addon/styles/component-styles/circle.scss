@@ -1,0 +1,12 @@
+& {
+  width: 264px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -14px;
+  margin-bottom: -14px;
+
+  &__swatch {
+    margin-right: 14px;
+    margin-bottom: 14px;
+  }
+}

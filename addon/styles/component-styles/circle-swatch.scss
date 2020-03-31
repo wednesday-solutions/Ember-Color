@@ -1,0 +1,11 @@
+& {
+  &__swatch {
+    border-radius: 50%;
+    background: transparent;
+    transition: 100ms box-shadow ease, 100ms transform ease;
+  }
+
+  &__swatch:hover {
+    transform: scale(1.2);
+  }
+}

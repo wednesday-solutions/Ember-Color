@@ -1,0 +1,30 @@
+& {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__pointer {
+    position: absolute;
+    cursor: default;
+  }
+
+  &--saturation-white {
+    background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));
+    background: linear-gradient(to right, #fff, rgba(255,255,255,0));
+  }
+
+  &--saturation-black {
+    background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));
+    background: linear-gradient(to top, #000, rgba(0,0,0,0));
+  }
+}

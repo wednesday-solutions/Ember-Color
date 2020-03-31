@@ -1,0 +1,8 @@
+{{#each colors as |color|}}
+  <div class="{{styleNamespace}}__swatch">
+    <CircleSwatch
+      @onClick={{action "onCircleSwatchSelected"}}
+      @isActive={{equal (to-lower-case color) (to-lower-case hex)}}
+      @color={{color}} />
+  </div>
+{{/each}}
