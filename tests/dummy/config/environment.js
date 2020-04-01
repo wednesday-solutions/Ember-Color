@@ -44,9 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/ember-color/';
-    // here you can enable a production-specific feature
+
   }
 
   return ENV;

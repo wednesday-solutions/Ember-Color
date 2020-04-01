@@ -19,7 +19,7 @@
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each",
-    "deploy": "ember github-pages:commit --environment production --message \"Build for gh-pages\" && git push origin gh-pages"
+    "deploy": "ember build --environment production && ember github-pages:commit --message \\\"Deploy gh-pages from commit $(git rev-parse HEAD)\\\" && git push origin gh-pages"
   },
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
