@@ -44,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/ember-color/';
+    ENV.rootURL = '/Ember-Color/';
   }
 
   return ENV;
