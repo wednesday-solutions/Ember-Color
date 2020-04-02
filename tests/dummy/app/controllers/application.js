@@ -14,7 +14,7 @@ export default Controller.extend({
 
   init() {
     this._super(...arguments);
-    this.set('color', convertColor('#FF0000'));
+    this.set('color', convertColor('#FFEDDE'));
   },
   previewSelectedColorStyle: computed('colorHex', function() {
     let { colorHex } = this;

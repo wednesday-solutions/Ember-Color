@@ -1,5 +1,6 @@
 body {
-  background-color: #eee;
+  margin: 0;
+  padding: 0;
 }
 
 .relative-container {
@@ -20,6 +21,7 @@ body {
   &__title {
     padding-top: 70px;
     font-size: 52px;
+    margin: 0;
     color: rgba(0, 0, 0, 0.65);
   }
 
@@ -96,4 +98,55 @@ body {
   color: rgba(0, 0, 0, 0.4);
   font-size: 12px;
   margin-top: 10px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 0.1fr 1.8fr 0.1fr;
+
+  &__content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  &__links-container {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__links-link {
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #4A413A;
+  }
+
+  &__logo {
+    height: 40px;
+  }
+}
+
+.page-content {
+  margin-bottom: 100px;
+}
+
+.footer {
+  background: #4A413A;
+
+  &__text {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    text-align: center;
+    color: white;
+  }
 }
