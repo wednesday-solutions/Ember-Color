@@ -179,6 +179,23 @@ body {
   &__how-to-use-container {
     margin-top: 40px;
   }
+
+  &__docs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+thead > td {
+  font-size: 20px;
+}
+
+td {
+  border: 1px solid #4A413A;
+  padding: 15px;
+  color: #4A413A;
 }
 
 .footer {
