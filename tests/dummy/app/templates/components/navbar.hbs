@@ -1,14 +1,14 @@
 <div class="navbar">
   <div></div>
   <div class="navbar__content-container">
-    <a href="https://www.wednesday.is">
+    <a href="/">
       <img class="navbar__logo" src="/assets/wednesday_black.svg" />
     </a>
 
     <ul class="navbar__links-container">
-      <li class="navbar__links-link">
+      {{#link-to "docs.alpha" class="navbar__links-link"}}
         Docs
-      </li>
+      {{/link-to}}
 
       <li class="navbar__links-link">
         <a class="navbar__link" href="mailto:hello@wednesday.is?Subject=Let's work together">Hire Us</a>
