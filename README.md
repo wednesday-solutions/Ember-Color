@@ -1,5 +1,7 @@
-ember-color
+Ember-color
 ==============================================================================
+
+![Wednesday Color Picker](https://raw.githubusercontent.com/wednesday-solutions/Ember-Color/master/wednesday_paint.png) 
 
 A collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter and more. 
 
