@@ -1,0 +1,19 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Hue
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <HuePicker
+      @onChange={{action (mut selectedColor)}}
+      @selectedColor={{selectedColor}}>
+      <SliderPointer />
+    </HuePicker>
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "hue.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>

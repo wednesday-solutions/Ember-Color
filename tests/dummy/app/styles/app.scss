@@ -144,9 +144,10 @@ body {
 
   &__content {
     display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-columns: 0.2fr 0.8fr;
     padding-top: 50px;
   }
+
   &__section-header {
     color: #4A413A;
     font-size: 20px;
@@ -156,6 +157,27 @@ body {
   &__section-title {
     color: #4A413A;
     margin: 0 0 20px 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.color-docs-container {
+  &__title {
+    margin: 0 0 30px 0;
+    font-size: 24px;
+  }
+
+  &__component-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__how-to-use-container {
+    margin-top: 40px;
   }
 }
 

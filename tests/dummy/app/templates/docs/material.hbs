@@ -1,0 +1,17 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Material
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Material
+      @selectedColor={{selectedColor}}
+      @onChange={{action (mut selectedColor)}}/>
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "material.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>

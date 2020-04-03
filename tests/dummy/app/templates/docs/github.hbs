@@ -1,0 +1,18 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Github
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Github
+      @selectedColor={{selectedColor}}
+      @trianglePosition="top-right"
+      @onChange={{action (mut selectedColor)}}/>
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "github.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>

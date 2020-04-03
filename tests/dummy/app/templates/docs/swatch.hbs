@@ -1,0 +1,13 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Swatch
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Alpha
+      @onChange={{action (mut selectedColor)}}
+      @selectedColor={{selectedColor}}>
+      <SliderPointer />
+    </Alpha>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Circle
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Circle
+      @selectedColor={{selectedColor}}
+      @onChange={{action (mut selectedColor)}} />
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "circle.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>

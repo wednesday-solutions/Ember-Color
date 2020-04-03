@@ -1,0 +1,17 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Slider Swatches
+  </p>
+
+  <div class="relative-container">
+    <SliderSwatches
+      @selectedColor={{selectedColor}}
+      @onChange={{action (mut selectedColor)}} />
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "slider-swatches.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Block
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Block
+      @selectedColor={{selectedColor}}
+      @onChange={{action (mut selectedColor)}}/>
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "block.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+</div>
