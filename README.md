@@ -1,8 +1,11 @@
 ember-color
 ==============================================================================
 
-[Short description of the addon.]
+A collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter and more. 
 
+This library is influenced by it's react counterpart: https://casesandberg.github.io/react-color/
+
+Demo: https://wednesday-solutions.github.io/Ember-Color/
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -22,13 +25,7 @@ ember install ember-color
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-See the [Contributing](CONTRIBUTING.md) guide for details.
+Detailed documentation on how to use different components in this repo can be found here: https://wednesday-solutions.github.io/Ember-Color/
 
 
 License
