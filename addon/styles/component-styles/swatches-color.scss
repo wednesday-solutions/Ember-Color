@@ -30,7 +30,13 @@
     pointer-events: none;
   }
 
-  &__check--active {
+  &__check--active_black {
     display: block;
+    content:url("/assets/ic_check_white.svg");
+  }
+
+  &__check--active_white {
+    display: block;
+    content:url("/assets/ic_check_black.svg");
   }
 }
