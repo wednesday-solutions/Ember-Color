@@ -1,9 +1,9 @@
 'use strict';
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
-const isProductionLikeBuild = process.env.DEPLOY_TARGET === 'production';
+const isProductionLikeBuild = process.env.EMBER_ENV === 'production';
 
-module.exports = function(defaults) {
+const app = function(defaults) {
   let app = new EmberAddon(defaults, {
     snippetPaths: ['tests/dummy/app/snippets'],
     fingerprint: {
@@ -20,3 +20,5 @@ module.exports = function(defaults) {
 
   return app.toTree();
 };
+
+module.exports = app;
