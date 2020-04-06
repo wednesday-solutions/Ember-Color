@@ -6,8 +6,7 @@ const app = function(defaults) {
   let app = new EmberAddon(defaults, {
     snippetPaths: ['tests/dummy/app/snippets'],
     fingerprint: {
-      prepend: 'https://wednesday-solutions.github.io/ember-color/',
-      exclude: ['assets/wednesday_black.svg'],
+      exclude: ['assets/wednesday_black.svg']
     }
   });
 
