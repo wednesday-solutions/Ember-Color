@@ -1,10 +1,14 @@
 'use strict';
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+const isProductionLikeBuild = process.env.DEPLOY_TARGET === 'production';
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    snippetPaths: ['tests/dummy/app/snippets']
+    snippetPaths: ['tests/dummy/app/snippets'],
+    fingerprint: {
+      prepend: isProductionLikeBuild ? 'https://wednesday-solutions.github.io/Ember-Color/' : ''
+    }
   });
 
   /*
