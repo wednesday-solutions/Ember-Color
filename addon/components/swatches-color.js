@@ -30,12 +30,5 @@ export default Component.extend({
       classNames.push(`${styleNamespace}__check--active`);
     }
     return classNames.join(' ');
-  }),
-  checkAssetName: computed('hexColor', function() {
-    let { hexColor } = this;
-    if (hexColor === '#FFFFFF') {
-      return '/assets/ic_check_black.svg';
-    }
-    return '/assets/ic_check_white.svg';
   })
 });

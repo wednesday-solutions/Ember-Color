@@ -6,4 +6,4 @@
   data-test-ember-color-check
   alt="Check"
   class={{checkClassName}}
-  src={{checkAssetName}}>
+  src={{if (equal hexColor "#FFFFFF") "/assets/ic_check_black.svg" "/assets/ic_check_white.svg"}}>
