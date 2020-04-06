@@ -36,6 +36,6 @@ export default Component.extend({
     if (hexColor === '#FFFFFF') {
       return '/assets/ic_check_black.svg';
     }
-    return '/assets//ic_check_white.svg';
+    return '/assets/ic_check_white.svg';
   })
 });
