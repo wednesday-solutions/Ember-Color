@@ -34,8 +34,8 @@ export default Component.extend({
   checkAssetName: computed('hexColor', function() {
     let { hexColor } = this;
     if (hexColor === '#FFFFFF') {
-      return 'ic_check_black.svg';
+      return '/ic_check_black.svg';
     }
-    return 'ic_check_white.svg';
+    return '/ic_check_white.svg';
   })
 });
