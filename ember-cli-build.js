@@ -6,7 +6,7 @@ const app = function(defaults) {
   let app = new EmberAddon(defaults, {
     snippetPaths: ['tests/dummy/app/snippets'],
     fingerprint: {
-      exclude: ['assets/wednesday_black.svg']
+      exclude: ['tests/dummy/public/assets/wednesday_black.svg']
     }
   });
 
