@@ -1,9 +1,9 @@
 <div class="navbar">
   <div></div>
   <div class="navbar__content-container">
-    <a href="/#">
+    {{#link-to 'index'}}
       <img alt="Wednesday Logo" class="navbar__logo" src="assets/wednesday_black.svg">
-    </a>
+    {{/link-to}}
 
     <ul class="navbar__links-container">
       {{#link-to "docs.alpha" class="navbar__links-link"}}
