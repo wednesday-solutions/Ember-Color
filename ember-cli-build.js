@@ -4,10 +4,7 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 const app = function(defaults) {
   let app = new EmberAddon(defaults, {
-    snippetPaths: ['tests/dummy/app/snippets'],
-    fingerprint: {
-      exclude: ['/assets/ic_check_black.svg', '/assets/ic_check_white.svg']
-    }
+    snippetPaths: ['tests/dummy/app/snippets']
   });
 
   /*
