@@ -2,7 +2,7 @@ Ember-color
 ==============================================================================
 
 
-![Wednesday Color Picker](./wednesday_colors.png) 
+<img src="https://github.com/wednesday-solutions/Ember-Color/blob/master/wednesday_colors.png" alt="Wednesday Color Picker" width="400" height="400">
 
 A collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter and more. 
 
