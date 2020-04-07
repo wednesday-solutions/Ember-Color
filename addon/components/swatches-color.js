@@ -23,11 +23,11 @@ export default Component.extend({
     }
     return classNames.join(' ');
   }),
-  checkClassName: computed('styleNamespace', 'isActive', 'hexColor', function() {
-    let { styleNamespace, isActive, hexColor } = this;
+  checkClassName: computed('styleNamespace', 'isActive', function() {
+    let { styleNamespace, isActive } = this;
     let classNames = [`${styleNamespace}__check`];
     if (isActive) {
-      classNames.push(hexColor === '#FFFFFF' ? `${styleNamespace}__check--active_white` : `${styleNamespace}__check--active_black`);
+      classNames.push(`${styleNamespace}__check--active`);
     }
     return classNames.join(' ');
   })
