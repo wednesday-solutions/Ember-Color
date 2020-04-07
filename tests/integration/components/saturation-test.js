@@ -22,7 +22,7 @@ module('Integration | Component | saturation', function(hooks) {
       }
     });
     this.set('onChange', (color) => {
-      assert.equal(color.hex, '#feeaea');
+      assert.equal(color.hex, '#fed6d6');
     });
     await render(hbs`<Saturation @onChange={{this.onChange}} @selectedColor={{this.selectedColor}}/>`);
     await click('[data-test-ember-color-saturation-container]');
