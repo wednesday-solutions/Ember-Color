@@ -1,0 +1,9 @@
+{{#each colorsDataSource as |colorDataSource|}}
+  <SliderSwatch
+    @first={{colorDataSource.first}}
+    @last={{colorDataSource.last}}
+    @onClick={{action "onClick"}}
+    @hsl={{hsl}}
+    @isActive={{colorDataSource.isActive}}
+    @offset={{colorDataSource.offset}}/>
+{{/each}}

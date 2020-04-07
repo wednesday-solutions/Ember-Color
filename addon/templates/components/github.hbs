@@ -1,0 +1,15 @@
+{{#unless hideTriangle}}
+  <div
+    data-test-ember-github-triangle
+    class={{triangleShadowClassName}}></div>
+  <div class={{triangleClassName}}></div>
+{{/unless}}
+{{#each colors as |color|}}
+  {{#let (equal (to-lower-case hex) (to-lower-case color)) (concat styleNamespace "__swatch") as |isActive swatchClassName|}}
+    <Swatch
+      @className={{if isActive (concat (concat swatchClassName " ") (concat swatchClassName "--active")) swatchClassName}}
+      @onClick={{action "onSwatchClicked"}}
+      @isActive={{equal (to-lower-case hex) (to-lower-case color)}}
+      @hexColor={{color}} />
+  {{/let}}
+{{/each}}

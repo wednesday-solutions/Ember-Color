@@ -1,0 +1,16 @@
+<div class="{{styleNamespace}}__checkboard">
+  <Checkboard />
+</div>
+
+<div class="{{styleNamespace}}__gradient" style={{gradientStyle}}></div>
+
+<div
+  class="{{styleNamespace}}__container"
+  role="button"
+  onMouseDown={{ action "handleMouseDown" }}
+  data-test-ember-color-alpha-picker-container>
+
+  <div style={{pointerStyle}} class="{{styleNamespace}}__pointer-container">
+    {{yield}}
+  </div>
+</div>

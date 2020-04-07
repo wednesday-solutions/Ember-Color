@@ -1,0 +1,46 @@
+<div class="color-docs-container">
+  <p class="color-docs-container__title">
+    Circle
+  </p>
+
+  <div class="color-docs-container__component-container">
+    <Circle
+      @selectedColor={{selectedColor}}
+      @onChange={{action (mut selectedColor)}} />
+  </div>
+
+  <div class="color-docs-container__how-to-use-container">
+    {{#let (get-code-snippet "circle.hbs") as |snippet|}}
+      <pre class={{snippet.language}}>{{snippet.source}}</pre>
+    {{/let}}
+  </div>
+
+  <div>
+    <table class="color-docs-container__docs-table">
+      <thead>
+        <td>Parameter</td>
+        <td>Description</td>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            selectedColor
+          </td>
+          <td>
+            A color object generate by using convertColor function. This represents the color that the user has selected.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            onChange
+          </td>
+          <td>
+            A function that is called when the user selects a color from the picker.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

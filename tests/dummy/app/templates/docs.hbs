@@ -1,0 +1,68 @@
+<div>
+  <Navbar />
+  <div class="docs-container">
+    <div></div>
+
+    <div class="docs-container__content">
+      <div class="docs-container__list">
+        <p class="docs-container__section-header">
+          Components
+        </p>
+
+        {{#link-to "docs.alpha" class="docs-container__section-title"}}
+          Alpha
+        {{/link-to}}
+
+        {{#link-to "docs.block" class="docs-container__section-title"}}
+          Block
+        {{/link-to}}
+
+        {{#link-to "docs.circle" class="docs-container__section-title"}}
+          Circle
+        {{/link-to}}
+
+        {{#link-to "docs.compact" class="docs-container__section-title"}}
+          Compact
+        {{/link-to}}
+
+        {{#link-to "docs.github" class="docs-container__section-title"}}
+          Github
+        {{/link-to}}
+
+        {{#link-to "docs.hue" class="docs-container__section-title"}}
+          Hue
+        {{/link-to}}
+
+        {{#link-to "docs.material" class="docs-container__section-title"}}
+          Material
+        {{/link-to}}
+
+        {{#link-to "docs.sketch" class="docs-container__section-title"}}
+          Sketch
+        {{/link-to}}
+
+        {{#link-to "docs.slider-swatches" class="docs-container__section-title"}}
+          Slider Swatches
+        {{/link-to}}
+
+        {{#link-to "docs.swatch" class="docs-container__section-title"}}
+          Swatch
+        {{/link-to}}
+
+        {{#link-to "docs.swatches" class="docs-container__section-title"}}
+          Swatches
+        {{/link-to}}
+
+        {{#link-to "docs.twitter" class="docs-container__section-title"}}
+          Twitter
+        {{/link-to}}
+      </div>
+      <div>
+        {{outlet}}
+      </div>
+    </div>
+
+    <div></div>
+  </div>
+  <Footer />
+</div>

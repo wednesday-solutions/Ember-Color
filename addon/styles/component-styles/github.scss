@@ -1,0 +1,95 @@
+& {
+  width: 200px;
+  position: relative;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin triangle() {
+  position: absolute;
+  border: 7px solid transparent;
+  border-bottom-color: white;
+}
+
+@mixin triangle-shadow() {
+  position: absolute;
+  border: 8px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+&__triangle--top-left {
+  @include triangle();
+  top: -14px;
+  left: 10px;
+}
+
+&__triangle-shadow--top-left {
+  @include triangle-shadow();
+  top: -16px;
+  left: 9px;
+}
+
+&__triangle--top-right {
+  @include triangle();
+  top: -14px;
+  right: 10px;
+}
+
+&__triangle-shadow--top-right {
+  @include triangle-shadow();
+  top: -16px;
+  right: 9px;
+}
+
+&__triangle--bottom-left {
+  @include triangle();
+  bottom: -14px;
+  left: 10px;
+  transform: rotate(180deg);
+}
+
+&__triangle-shadow--bottom-left {
+  @include triangle-shadow();
+  bottom: -16px;
+  left: 9px;
+  transform: rotate(180deg);
+}
+
+&__triangle--bottom-right {
+  @include triangle();
+  bottom: -14px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+&__triangle-shadow--bottom-right {
+  @include triangle-shadow();
+  bottom: -16px;
+  right: 9px;
+  transform: rotate(180deg);
+}
+
+&__swatch {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+@mixin swatch-active {
+  position: relative;
+  z-index: 2;
+  outline: 2px solid white !important;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+&__swatch--active {
+  @include swatch-active();
+}
+
+&__swatch:hover {
+  @include swatch-active();
+}

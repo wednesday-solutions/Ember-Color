@@ -1,0 +1,41 @@
+<EditableInput
+  @label="Hex"
+  @styleInput={{borderBottomColor}}
+  @onChange={{action "onHexValueChanged"}}
+  @color={{hex}}
+  @value={{hex}}
+  @labelClassName="{{styleNamespace}}__label"
+  @inputClassName="{{styleNamespace}}__input-hex"
+/>
+
+<div class="{{styleNamespace}}__rgb-container">
+  <div class="{{styleNamespace}}__rgb-editable-text">
+    <EditableInput
+      @label="R"
+      @onChange={{action "onRedValueChanged"}}
+      @color={{selectedColor}}
+      @value={{redValue}}
+      @labelClassName="{{styleNamespace}}__label"
+      @inputClassName="{{styleNamespace}}__input" />
+  </div>
+
+  <div class="{{styleNamespace}}__rgb-editable-text">
+    <EditableInput
+      @label="G"
+      @onChange={{action "onGreenValueChanged"}}
+      @color={{selectedColor}}
+      @value={{greenValue}}
+      @labelClassName="{{styleNamespace}}__label"
+      @inputClassName="{{styleNamespace}}__input" />
+  </div>
+
+  <div class="{{styleNamespace}}__rgb-editable-text">
+    <EditableInput
+      @label="B"
+      @onChange={{action "onBlueValueChanged"}}
+      @color={{selectedColor}}
+      @value={{blueValue}}
+      @labelClassName="{{styleNamespace}}__label"
+      @inputClassName="{{styleNamespace}}__input" />
+  </div>
+</div>

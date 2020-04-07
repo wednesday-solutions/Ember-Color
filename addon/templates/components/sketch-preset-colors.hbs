@@ -1,0 +1,8 @@
+{{#each hexColors as |color|}}
+  <SwatchWithBoxShadow
+    @isActive={{equal (to-lower-case color) (to-lower-case hex)}}
+    @customShadow="rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"
+    @className="{{styleNamespace}}__swatch"
+    @hexColor={{color}}
+    @onClick={{action "onSwatchSelected"}}/>
+{{/each}}

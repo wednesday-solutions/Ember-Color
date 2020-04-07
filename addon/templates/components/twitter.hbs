@@ -1,0 +1,28 @@
+{{#unless hideTriangle}}
+  <div class={{triangleShadowClassName}}></div>
+  <div class={{triangleClassName}}></div>
+{{/unless}}
+<div class="{{styleNamespace}}__body">
+  {{#each hexColors as |hexColor|}}
+    <span>
+      <SwatchWithBoxShadow
+        @onClick={{action "onSwatchSelected"}}
+        @onHover={{action "onSwatchHover"}}
+        @isActive={{equal (to-lower-case hexColor) (to-lower-case hex)}}
+        @className="{{styleNamespace}}__swatch"
+        @hexColor={{hexColor}}/>
+    </span>
+  {{/each}}
+
+  <div class="{{styleNamespace}}__hash">
+    #
+  </div>
+  <div>
+    <input
+      data-test-twitter-input-text
+      value={{selectedColorHexDisplayString}}
+      oninput={{action "onTextEntered"}}
+      class="{{styleNamespace}}__input">
+  </div>
+  <div class="{{styleNamespace}}__clear"></div>
+</div>

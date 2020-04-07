@@ -1,0 +1,8 @@
+{{#each hexColorGroup as |color index|}}
+  <SwatchesColor
+    @first={{equal index 0}}
+    @last={{equal (inc index) group.length}}
+    @isActive={{equal (to-lower-case color) (to-lower-case activeColor)}}
+    @onClick={{onClick}}
+    @hexColor={{color}} />
+{{/each}}
